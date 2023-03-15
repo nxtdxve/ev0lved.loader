@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ev0lved.loader</title>
+</head>
+
+<body>
+<span id="closeText">close</span>
+    <div id="dragArea"></div>
+
+    <div class="main-container">
+        <form id="login" class="container" method="post">
+            <a class="title">Panel Login</a>
+            <div class="separator"></div>
+            
+            <input spellcheck="false" type="text" placeholder="username" name="username">
+            <input spellcheck="false" type="password" placeholder="password" name="password">
+
+            <script>function submit(token) { document.getElementById("login").submit(); }</script>
+            <button class="g-recaptcha" data-sitekey="6LdBbhIhAAAAAIQxf1buBUAUf_t754g8QIrXS6ZT" data-callback="submit"
+                data-theme="dark" onclick="this.innerHTML='<a class=spinner>'">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("closeText").addEventListener("click", () => {
+            window.close();
+        });
+    </script>
+</body>
+</html>

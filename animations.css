@@ -1,0 +1,36 @@
+.spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid;
+    border-radius: 50%;
+    animation: spinner 0.75s linear infinite;
+
+    border-color: rgb(128, 192, 255) transparent transparent transparent;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0turn);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fade_in;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

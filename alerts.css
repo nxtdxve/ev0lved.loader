@@ -1,0 +1,49 @@
+.alert {
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px;
+    word-wrap: break-word;
+    font-family: monospace;
+    font-size: 12px;
+}
+.alert:before {
+    font-family: "font awesome 6 free";
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.alert[type=error] {
+    color: rgb(175, 70, 70);
+    background: rgb(253, 182, 182); 
+    border: 1px rgb(255, 144, 144) solid;
+}
+.alert[type=error]:before {
+    content: "\f06a";
+}
+
+.alert[type=warning] {
+    color: rgb(146, 114, 0);
+    background: rgb(252, 227, 139); 
+    border: 1px rgb(255, 208, 38) solid;
+}
+.alert[type=warning]:before {
+    content: "\f06a";
+}
+
+.alert[type=success] {
+    color: rgb(70, 175, 70);
+    background: rgb(179, 255, 179); 
+    border: 1px rgb(137, 255, 137) solid; 
+}
+.alert[type=success]:before {
+    content: "\f058";
+}
+
+.alert[type=message] {
+    color: rgb(0, 108, 170);
+    background: rgb(163, 221, 255); 
+    border: 1px rgb(58, 180, 250) solid; 
+}
+.alert[type=message]:before {
+    content: "\f05a";
+}

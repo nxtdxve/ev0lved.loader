@@ -1,0 +1,283 @@
+@import "https://use.fontawesome.com/releases/v6.0.0/css/all.css";
+@import "alerts.css";
+@import "animations.css";
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    
+    background: rgb(30, 30, 30);
+    border: 1px rgb(0, 0, 0) solid;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    background: rgb(128, 192, 255);
+    border: 1px rgb(0, 0, 0) solid;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    background-color: rgb(20, 20, 20);
+    margin: 0;
+
+    overflow: hidden;
+}
+
+form {
+    margin: 0;
+}
+
+.g-recaptcha {
+    margin-top: -5px;
+}
+
+a, button, input, table, .navigation {
+    color: rgb(200, 200, 200);
+    font-family: monospace;
+    font-size: 11px;
+}
+
+a[href] {
+    transition-duration: .3s;
+    font-weight: bold;
+}
+a[href]:hover {
+    color: rgb(128, 192, 255);
+}
+
+button {
+    border-radius: 3px;
+    transition-duration: .3s;
+    height: 25px;
+    width: 100%;
+
+    background: linear-gradient(rgb(30, 30, 30), rgb(15, 15, 15));
+    border: 1px rgb(0, 0, 0) solid;
+}
+button[type=same-line] {
+    margin-right: -1px; 
+    vertical-align: top;
+}
+button:hover {
+    color: white;
+    border-color: rgb(128, 192, 255);
+}
+button[type=discord]:hover {
+    border-color: rgb(114, 137, 218);
+}
+button:active {
+    background: linear-gradient(rgb(35, 35, 35), rgb(20, 20, 20));
+}
+
+input {
+    border-radius: 3px;
+    transition-duration: .3s;
+    height: 25px;
+    width: calc(100% - 10px);
+    padding: 5px;
+
+    caret-color: white;
+    background: rgb(20, 20, 20);
+    border: 1px rgb(0, 0, 0) solid;
+}
+input:hover, input:focus {
+    border-color: rgb(128, 192, 255);
+}
+input:focus {
+    color: white;
+    outline: none;
+}
+input::selection {
+    background: rgb(128, 192, 255);
+}
+
+input:last-of-type {
+    margin-bottom: 5px;
+}
+
+table {
+    border-radius: 3px;
+    padding: 5px;
+
+    background: linear-gradient(rgb(30, 30, 30), rgb(15, 15, 15));
+    border: 1px rgb(0, 0, 0) solid;
+}
+th {
+    color: white;
+}
+td[status=undetected]:after {
+    content: "undetected";
+    color: green;
+}
+td[status=updating]:after {
+    content: "updating";
+    color: orange;
+}
+td[status=expired]:after {
+    content: "expired";
+    color: red;
+}
+td:hover {
+    color: rgb(225, 225, 225);
+}
+tr {
+    text-align: left;
+}
+
+.center {
+    margin-top: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px;
+    display: grid;
+    grid-row-gap: 5px;
+
+    background: rgb(25, 25, 25);
+    border: 1px rgb(0, 0, 0) solid;
+}
+.container .title {
+    font-weight: bold;
+    font-size: 12px;
+    
+    color: white;
+}
+.container .separator {
+    height: 1px;
+    background: rgb(128, 192, 255);
+}
+
+.same-line {
+    margin: 0;
+}
+
+.navigation {
+    overflow: hidden;
+}
+.navigation a:not(:first-child) {
+    padding: 15px;
+    text-decoration: none;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+    transition-duration: 0.3s;
+
+    color: rgb(200, 200, 200);
+    font-weight: lighter;
+}
+.navigation a:not(:last-of-type):not(:first-child) {
+    border-left: 1px solid rgb(30, 30, 30);
+}
+.navigation a:hover {
+    color:rgb(128, 192, 255);
+}
+.navigation a.left {
+    float: left;
+}
+.navigation a.right {
+    float: right;
+}
+.navigation .line {
+    height: 1px;
+    background-color: rgb(30, 30, 30);
+}
+
+.rank-tag {
+    border-radius: 3px;
+    padding: 2px;
+    font-weight: 900;
+    font-family: verdana;
+
+    color: rgb(30, 30, 30);
+    background: rgb(128, 192, 255);
+}
+
+.copyright {
+    transition-duration: 0.3s;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 5px;
+    font-style: italic;
+
+    color: rgb(225, 225, 225, .25);
+}
+.copyright:after {
+    content: "copyright (c) 2018-2022 ev0lved.systems, dexter delgato software. all rights reserved";
+}
+
+.glowing {
+    text-shadow: 0 0 10px rgb(128, 192, 255);
+}
+
+/* Add this new rule */
+.container p {
+    color: rgb(200, 200, 200);
+}
+
+#closeText:hover {
+    color: rgb(128, 192, 255);
+}
+
+/* Update the existing rule for #dragArea */
+#dragArea {
+    -webkit-app-region: drag;
+    border-radius: 3px;
+    transition-duration: .3s;
+    height: 25px;
+    width: 100%;
+    background: linear-gradient(rgb(30, 30, 30), rgb(15, 15, 15));
+    border: 1px rgb(0, 0, 0) solid;
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+}
+
+/* Add a new rule for .main-container */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 10% auto;
+}
+
+/* Add a new rule for #closeText */
+#closeText {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    cursor: pointer;
+    color: rgb(200, 200, 200);
+    font-family: monospace;
+}
+
+
