@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <title>ev0lved.loader</title>
 </head>
@@ -19,13 +20,11 @@
         <form id="login" class="container" method="post">
             <a class="title">ev0lved.systems</a>
             <div class="separator"></div>
-            
+
             <input spellcheck="false" type="text" placeholder="username" name="username">
             <input spellcheck="false" type="password" placeholder="password" name="password">
 
-            <script>function submit(token) { document.getElementById("login").submit(); }</script>
-            <button class="g-recaptcha" data-sitekey="6LdBbhIhAAAAAIQxf1buBUAUf_t754g8QIrXS6ZT" data-callback="submit"
-                data-theme="dark" onclick="this.innerHTML='<a class=spinner>'">Submit</button>
+            <button data-callback="submit"data-theme="dark" onclick="this.innerHTML='<a class=spinner>'">Submit</button>
         </form>
     </div>
     <script>
@@ -48,13 +47,13 @@
                     type: 'circle',
                     stroke: {
                         width: 0,
-                        color: '#000000'
+                        color: '#80c0ff'
                     },
                     polygon: {
                         nb_sides: 5
                     },
                     image: {
-                        src: 'img/github.svg',
+                        src: 'img/',
                         width: 100,
                         height: 100
                     }
@@ -142,6 +141,35 @@
             },
             retina_detect: true
         });
+        document.getElementById('login').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const username = event.target.username.value;
+            const password = event.target.password.value;
+
+            try {
+                const response = await fetch('http://localhost:3001/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password }),
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Login successful
+                    console.log('Login successful:', data.user);
+                    // Redirect or perform further actions here
+                } else {
+                    // Show error message
+                    console.error('Error:', data.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
     </script>
+    <script src="main.js"></script>
 </body>
+
 </html>

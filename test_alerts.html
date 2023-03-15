@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts Test</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link rel="stylesheet" href="./css/alerts.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        .alert-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="alert-container">
+        <div class="alert fade-in" type="error">
+            This is an error alert.
+        </div>
+        <div class="alert fade-in" type="warning">
+            This is a warning alert.
+        </div>
+        <div class="alert fade-in" type="success">
+            This is a success alert.
+        </div>
+        <div class="alert fade-in" type="message">
+            This is a message alert.
+        </div>
+    </div>
+</body>
+</html>
